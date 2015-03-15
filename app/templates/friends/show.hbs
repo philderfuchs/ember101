@@ -1,7 +1,10 @@
-<h1>Friends Index</h1>
+<h1>Show Template</h1>
 <ul>
   <li>First Name: {{model.firstName}}</li>
   <li>Last Name: {{model.lastName}}</li>
   <li>Email: {{model.email}}</li>
   <li>twitter: {{model.twitter}}</li>
 </ul>
+{{#link-to 'friends'}}
+back to index
+{{/link-to}}

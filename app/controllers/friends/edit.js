@@ -1,6 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  errorMessage: Ember.computed('this.isValid', function() {
+      if(this.get('isValid')) {
+        return 'errthing aight'
+      } else {
+        return 'better fill out all fields'
+      };
+    }
+  ),
   isValid: Ember.computed(
     'model.email',
     'model.firstName',
@@ -15,7 +23,7 @@ export default Ember.Controller.extend({
   ),
   actions: {
     save: function() {
-      console.log('+- save action in friends new controller');
+      console.log('+- save action in friends edit controller');
 
       if (this.get('isValid')) {
         var _this = this;
@@ -30,7 +38,7 @@ export default Ember.Controller.extend({
     cancel: function() {
       console.log('+- cancel action in friends new controller');
 
-      this.transitionToRoute('friends');
+      this.transitionToRoute('friends.show', this.get('model'));
       return false;
     }
   }
