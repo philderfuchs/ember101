@@ -5,6 +5,10 @@
   <li>Email: {{model.email}}</li>
   <li>twitter: {{model.twitter}}</li>
 </ul>
+{{#link-to 'friends.edit' model}}
+edit that mofo
+{{/link-to}}
+
 {{#link-to 'friends'}}
 back to index
 {{/link-to}}
