@@ -3,10 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   errorMessage: Ember.computed('this.isValid', function() {
       if(this.get('isValid')) {
-        return 'errthing aight'
+        return 'errthing aight';
       } else {
-        return 'better fill out all fields'
-      };
+        return 'better fill out all fields';
+      }
     }
   ),
   isValid: Ember.computed(
@@ -15,10 +15,10 @@ export default Ember.Controller.extend({
     'model.lastName',
     'model.twitter',
     function() {
-      return !Ember.isEmpty(this.get('model.email'))
-      && !Ember.isEmpty(this.get('model.firstName'))
-      && !Ember.isEmpty(this.get('model.lastName'))
-      && !Ember.isEmpty(this.get('model.twitter'));
+      return !Ember.isEmpty(this.get('model.email')) &&
+          !Ember.isEmpty(this.get('model.firstName')) &&
+          !Ember.isEmpty(this.get('model.lastName')) &&
+          !Ember.isEmpty(this.get('model.twitter'));
     }
   ),
   actions: {
