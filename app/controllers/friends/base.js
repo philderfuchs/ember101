@@ -22,7 +22,7 @@ export default Ember.Controller.extend({
     ),
     actions: {
         save: function () {
-            console.log('+- save action in friends edit controller');
+            console.log('+- save action in friends base controller');
 
             if (this.get('isValid')) {
                 var _this = this;

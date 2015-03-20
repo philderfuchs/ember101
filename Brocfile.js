@@ -7,6 +7,9 @@ var app = new EmberApp();
 /* picnic */
 app.import('bower_components/picnic/releases/v2.min.css');
 
+/* moment */
+app.import('bower_components/moment/moment.js');
+
 /* fontello */
 
 app.import('vendor/fontello/fontello.css');
@@ -19,7 +22,7 @@ app.import('vendor/fontello/font/fontello.eot', {
 app.import('vendor/fontello/font/fontello.svg', {
     destDir: 'font'
 });
-app.import('vendor/fontello/font/fontello.woff',{
+app.import('vendor/fontello/font/fontello.woff', {
     destDir: 'font'
 });
 
