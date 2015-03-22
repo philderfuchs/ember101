@@ -1,0 +1,1 @@
+function formatDate(date, format) {  return window.moment(date).fromNow();}export {  formatDate};
